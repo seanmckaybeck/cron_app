@@ -26,15 +26,6 @@ def index():
         result = create_string(form)
     return render_template('index.html', form=form, result=result)
 
-# @app.route('/generate')
-# def generate_config_page():
-#     return render_template('config.html')
-
-# @app.route('/api/generate_config')
-# def generate_config():
-#     # do some stuff to make it
-#     return render_template('config.html')
-
 def is_valid_input(min=-1, max=-1):
     msg = 'Must be a value between %d and %d or *' % (min, max)
 
