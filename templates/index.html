@@ -1,11 +1,25 @@
-{% extends "bootstrap/base.html" %}
-
-{% block title %}Simple Cron Configure{% endblock %}
-
+{% extends "base.html" %}
 {% block content %}
-<div class="container">
-  <div class="page header"}
-    <h1>Welcome to the simple cron configuration tool!</h1>
-  </div>
-</div>
+<h1>Welcome to the Simple Cron Configuration tool page!</h1>
+
+<form action="" method="post" name="config">
+    {{form.hidden_tag()}}
+
+    <p>{{form.minute.label}} {{form.minute}}</p>
+    <p>{{form.hour.label}} {{form.hour}}</p>
+    <p>{{form.day.label}} {{form.day}}</p>
+    <p>{{form.month.label}} {{form.month}}</p>
+    <p>{{form.weekday.label}} {{form.weekday}}</p>
+    <p>{{form.submit}}</p>
+</form>
+
+{% for field in form.errors %}
+  {% for error in form.errors[field] %}
+  <span style="color: red;">{{field}}: {{error}}</span><br/>
+  {% endfor %}
+{% endfor %}
+
+{% if result %}
+The result is {{result}}
+{% endif %}
 {% endblock %}
