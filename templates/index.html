@@ -10,22 +10,22 @@ It is an extremely useful tool for even the most mundane of tasks.
 The <a href="https://en.wikipedia.org/wiki/Cron">Wikipedia page</a> on Cron provides an excellent overview of how configuration works.
 <br/><br/>
 
+To create a Cron configuration go to your shell and enter the command <code>crontab -e</code>. 
+This will open your default text editor, most likely Vi, and you can begin entering your cronjob configurations with one on each line.
+<br/><br/>
+
+To give you an idea of how it should look, let's say you want to run a job every hour on the hour. It would look like <code>0 * * * *</code>.
+How about every 30 minutes? <code>*/30 * * * *</code>. Every 2 hours at the top of the hour? <code>0 */2 * * *</code>.
+<br/><br/>
+
 The purpose of this page is to help newcomers to Cron learn how to configure a cronjob for a task. 
 Below is a form which will help you configure your first cronjob. 
-Fill it out, click submit, and a configuration will be generated for you.
+Fill it out, click submit, and a configuration will be generated for you. 
+Note that if you want a job to run every <code>x</code> minutes/hours/days just put a <code>/</code> in front of your number. 
+If you want the job to run every minute/hour/day put a <code>*</code> instead of a number. 
 <br/><br/>
 
 {{ wtf.quick_form(form) }}
-<!-- <form action="" method="post" name="config"> -->
-<!--     {{form.hidden_tag()}} -->
-
-<!--     <p>{{form.minute.label}} {{form.minute}}</p> -->
-<!--     <p>{{form.hour.label}} {{form.hour}}</p> -->
-<!--     <p>{{form.day.label}} {{form.day}}</p> -->
-<!--     <p>{{form.month.label}} {{form.month}}</p> -->
-<!--     <p>{{form.weekday.label}} {{form.weekday}}</p> -->
-<!--     <p>{{form.submit}}</p> -->
-<!-- </form> -->
 
 {% for field in form.errors %}
   {% for error in form.errors[field] %}
@@ -34,7 +34,7 @@ Fill it out, click submit, and a configuration will be generated for you.
 {% endfor %}
 
 {% if result %}
-The result is {{result}}
+The result is <code>{{result}}</code>
 
 <br/><br/>
 <!-- tweet -->
