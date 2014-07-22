@@ -22,6 +22,7 @@ def index():
     result = ''
     if form.validate_on_submit():
         # create the correct cron submission
+        print 'made it'
         result = create_string(form)
     return render_template('index.html', form=form, result=result)
 
