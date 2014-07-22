@@ -3,21 +3,6 @@
 {% block content %}
 <h1>Welcome to the Simple Cron Config tool page!</h1>
 
-Cron is a software tool you can find on Unix-based operating systems. 
-It works as a job scheduler and allows the user to run tasks periodically without having to remember to do so. 
-I use it to run Python and Bash scripts that auto-create Jenkins builds or to check for system notifications and trigger a task based on the notification. 
-It is an extremely useful tool for even the most mundane of tasks. 
-The <a href="https://en.wikipedia.org/wiki/Cron">Wikipedia page</a> on Cron provides an excellent overview of how configuration works.
-<br/><br/>
-
-To create a Cron configuration go to your shell and enter the command <code>crontab -e</code>. 
-This will open your default text editor, most likely Vi, and you can begin entering your cronjob configurations with one on each line.
-<br/><br/>
-
-To give you an idea of how it should look, let's say you want to run a job every hour on the hour. It would look like <code>0 * * * *</code>.
-How about every 30 minutes? <code>*/30 * * * *</code>. Every 2 hours at the top of the hour? <code>0 */2 * * *</code>.
-<br/><br/>
-
 The purpose of this page is to help newcomers to Cron learn how to configure a cronjob for a task. 
 Below is a form which will help you configure your first cronjob. 
 Fill it out, click submit, and a configuration will be generated for you. 
@@ -41,6 +26,21 @@ The result is <code>{{result}}</code>
 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://thaweatherman.pythonanywhere.com" data-text="I just easily configured a cronjob! You can too at" data-size="large" data-hashtags="linux">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 {% endif %}
+<br/><br/>
+
+Cron is a software tool you can find on Unix-based operating systems. 
+It works as a job scheduler and allows the user to run tasks periodically without having to remember to do so. 
+I use it to run Python and Bash scripts that auto-create Jenkins builds or to check for system notifications and trigger a task based on the notification. 
+It is an extremely useful tool for even the most mundane of tasks. 
+The <a href="https://en.wikipedia.org/wiki/Cron">Wikipedia page</a> on Cron provides an excellent overview of how configuration works.
+<br/><br/>
+
+To create a Cron configuration go to your shell and enter the command <code>crontab -e</code>. 
+This will open your default text editor, most likely Vi, and you can begin entering your cronjob configurations with one on each line.
+<br/><br/>
+
+To give you an idea of how it should look, let's say you want to run a job every hour on the hour. It would look like <code>0 * * * *</code>.
+How about every 30 minutes? <code>*/30 * * * *</code>. Every 2 hours at the top of the hour? <code>0 */2 * * *</code>.
 <br/><br/>
 
 {% endblock %}
