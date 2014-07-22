@@ -2,6 +2,17 @@
 {% block content %}
 <h1>Welcome to the Simple Cron Configuration tool page!</h1>
 
+Cron is a software tool you can find on Unix-based operating systems. 
+It works as a job scheduler and allows the user to run tasks periodically without having to remember to do so. 
+I use it to run Python and Bash scripts that auto-create Jenkins builds or to check for system notifications and trigger a task based on the notification. 
+It is an extremely useful tool for even the most mundane of tasks. 
+The <a href="https://en.wikipedia.org/wiki/Cron">Wikipedia page</a> on Cron provides an excellent overview of how configuration works.
+
+The purpose of this page is to help newcomers to Cron learn how to configure a cronjob for a task. 
+Below is a form which will help you configure your first cronjob. 
+Fill it out, click submit, and a configuration will be generated for you.
+<br/><br/>
+
 <form action="" method="post" name="config">
     {{form.hidden_tag()}}
 
